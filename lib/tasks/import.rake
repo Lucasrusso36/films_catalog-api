@@ -7,8 +7,8 @@ namespace :import do
       movie = Movie.new(
       title: row['title'],
       genre: row['type'],
-      country: row['country'], 
       year: row['release_year'], 
+      country: row['country'], 
       published_at: row['date_added'],
       description: row['description']
       )

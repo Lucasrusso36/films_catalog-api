@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 
   # GET /movies
   def index
-    @movies = Movie.all
+    @movies = Movie.all.order(year: :desc).search(params[:genre]).sorted_by_genre
 
     render json: @movies
   end
